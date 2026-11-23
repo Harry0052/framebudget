@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "clip_id": "variable-timing",
+  "session_id": "session-eval",
+  "class": "zone_intrusion",
+  "time_unit": "seconds",
+  "fps_nominal": 20,
+  "events": [
+    {
+      "id": "var-short",
+      "start_s": 0.1,
+      "end_s": 0.2,
+      "start_ms": 100,
+      "end_ms": 200,
+      "duration_band": "short"
+    },
+    {
+      "id": "var-long",
+      "start_s": 2.5,
+      "end_s": 4.0,
+      "start_ms": 2500,
+      "end_ms": 4000,
+      "duration_band": "long"
+    }
+  ]
+}

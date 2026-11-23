@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "name": "staged",
+  "clips": [
+    {
+      "id": "proof-10s",
+      "media": "staged/proof-10s/clip.mp4",
+      "labels": "staged/proof-10s/labels.json",
+      "timestamps": "staged/proof-10s/timestamps.json"
+    },
+    {
+      "id": "absent-false",
+      "media": "staged/absent-false/clip.mp4",
+      "labels": "staged/absent-false/labels.json",
+      "timestamps": "staged/absent-false/timestamps.json"
+    },
+    {
+      "id": "edge-entry",
+      "media": "staged/edge-entry/clip.mp4",
+      "labels": "staged/edge-entry/labels.json",
+      "timestamps": "staged/edge-entry/timestamps.json"
+    },
+    {
+      "id": "variable-timing",
+      "media": "staged/variable-timing/clip.mp4",
+      "labels": "staged/variable-timing/labels.json",
+      "timestamps": "staged/variable-timing/timestamps.json"
+    },
+    {
+      "id": "noisy-absent",
+      "media": "staged/noisy-absent/clip.mp4",
+      "labels": "staged/noisy-absent/labels.json",
+      "timestamps": "staged/noisy-absent/timestamps.json"
+    }
+  ]
+}

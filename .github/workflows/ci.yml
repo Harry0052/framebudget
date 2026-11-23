@@ -1,0 +1,67 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CC: gcc
+  CXX: g++
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential cmake pkg-config libopencv-dev libavutil-dev
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build -j
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Demo
+        run: ./build/framebudget compare --dataset staged --budgets 1,2,5 --output out/demo
+
+      - name: Upload demo report
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
+        with:
+          name: demo-report
+          path: |
+            out/demo/report.json
+            out/demo/report.html
+          if-no-files-found: error
+
+  asan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential cmake pkg-config libopencv-dev libavutil-dev
+
+      - name: Configure
+        run: cmake -S . -B build-san -DCMAKE_BUILD_TYPE=Debug -DFRAMEBUDGET_SANITIZERS=ON
+
+      - name: Build
+        run: cmake --build build-san -j
+
+      - name: Test
+        run: ctest --test-dir build-san --output-on-failure

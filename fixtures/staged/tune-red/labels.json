@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "clip_id": "tune-red",
+  "session_id": "session-tune",
+  "class": "zone_intrusion",
+  "time_unit": "seconds",
+  "fps_nominal": 20,
+  "events": [
+    {
+      "id": "tune-long",
+      "start_s": 1.0,
+      "end_s": 4.0,
+      "start_ms": 1000,
+      "end_ms": 4000,
+      "duration_band": "long"
+    }
+  ]
+}
