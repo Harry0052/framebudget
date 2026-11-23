@@ -1,6 +1,19 @@
 # Grokbot progress
 
-Summary: P01–P06 PASS. Next phase is P07 (publish the branch, wait for GitHub Actions, tag the green commit).
+Summary: P01–P07 PASS. The public pull request is open. `main` is unchanged. Tag `v0.1.0` points at the commit whose GitHub Actions run completed green.
+
+## P07 — Publish and verify on GitHub
+
+- **Phase and status:** P07 PASS
+- **Files changed:** this progress record. The published tree is the pull request branch. `main` was not updated.
+- **Commands and results:**
+  - Destination checked: `origin` is `Harry0052/framebudget`, public repository, MIT `LICENSE` already on `main`.
+  - Pushed `cursor/framebudget-mvp-b088` and opened https://github.com/Harry0052/framebudget/pull/1
+  - GitHub Actions run https://github.com/Harry0052/framebudget/actions/runs/45118931165 completed with conclusion `success` on `20f63f083a4fd0320258c633323a8401b28cab2a`. Jobs `test` and `asan` passed. A second run on the same SHA, https://github.com/Harry0052/framebudget/actions/runs/45118939699, also passed.
+  - Tag `v0.1.0` points at `20f63f083a4fd0320258c633323a8401b28cab2a`, the commit those runs tested. This progress note is the following commit and does not move the tag. The demo was repeated from a clean checkout of the tag. `main` was not merged.
+- **Artifact paths:** pull request https://github.com/Harry0052/framebudget/pull/1 ; tag `v0.1.0` ; CI https://github.com/Harry0052/framebudget/actions/runs/45118931165
+- **Open issues:** The owner merges. This agent does not.
+- **Next phase:** none. The playbook stops after P07.
 
 ## P06 — Prepare a reproducible open-source release
 
