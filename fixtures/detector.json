@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "zone": {
+    "x": 120,
+    "y": 80,
+    "w": 80,
+    "h": 80
+  },
+  "color": {
+    "r_min": 200,
+    "g_max": 40,
+    "b_max": 40
+  },
+  "fraction_threshold": 0.5,
+  "threshold_session": "session-tune",
+  "threshold_note": "Chosen on tune-red, where the decoded in-zone fraction is 1 during the labeled interval and 0 outside, then frozen. session-eval clips do not move this number.",
+  "coalesce_gap_ms": 1250,
+  "match_tolerance_ms": 0,
+  "short_band_lt_ms": 1000,
+  "motion_threshold": 20.0,
+  "zone_buffer_bytes": 67108864
+}

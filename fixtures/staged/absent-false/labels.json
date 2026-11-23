@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "clip_id": "absent-false",
+  "session_id": "session-eval",
+  "class": "zone_intrusion",
+  "time_unit": "seconds",
+  "fps_nominal": 20,
+  "events": []
+}

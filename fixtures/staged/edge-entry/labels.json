@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "clip_id": "edge-entry",
+  "session_id": "session-eval",
+  "class": "zone_intrusion",
+  "time_unit": "seconds",
+  "fps_nominal": 20,
+  "events": [
+    {
+      "id": "edge-start",
+      "start_s": 0.0,
+      "end_s": 0.3,
+      "start_ms": 0,
+      "end_ms": 300,
+      "duration_band": "short"
+    },
+    {
+      "id": "edge-end",
+      "start_s": 9.7,
+      "end_s": 9.95,
+      "start_ms": 9700,
+      "end_ms": 9950,
+      "duration_band": "short"
+    }
+  ]
+}

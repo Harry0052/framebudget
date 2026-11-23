@@ -1,0 +1,11 @@
+build/
+build-*/
+out/
+cmake-build-*/
+compile_commands.json
+*.o
+*.a
+.cache/
+__pycache__/
+*.pyc
+.venv/

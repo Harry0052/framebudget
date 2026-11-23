@@ -1,0 +1,28 @@
+{
+  "note": "Hand schedule. 200 frames at 50 ms. Short frames 44-48. Long frames 120-160. Uniform 1 Hz selects indices 0,20,...,180.",
+  "full_frame": {
+    "decoded_frames": 200,
+    "detector_calls": 200,
+    "motion_checks": 0,
+    "true_positives": 2,
+    "denominator": 2,
+    "false_alarms": 0,
+    "missed_event_ids": [],
+    "short_true_positives": 1,
+    "long_true_positives": 1,
+    "proof_short_delay_ms": 0,
+    "proof_long_delay_ms": 0
+  },
+  "uniform_1": {
+    "decoded_frames": 200,
+    "detector_calls": 10,
+    "true_positives": 1,
+    "denominator": 2,
+    "false_alarms": 0,
+    "missed_event_ids": [
+      "proof-short"
+    ],
+    "proof_long_delay_ms": 0,
+    "proof_long_first_hit_ms": 6000
+  }
+}

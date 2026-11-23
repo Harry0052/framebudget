@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "generator": "tools/generate_fixtures.py",
+  "seed": 19001,
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "encode": "libx264 QP 0, yuv420p, +faststart, container mp4",
+  "license": "Original synthetic media created for this repository. No third-party footage or model weights. The clips are distributed under the repository MIT license. FFmpeg and libx264 are generation tools and are not vendored; the Ubuntu ffmpeg package is GPL-2+ because that build enables GPL components. OpenCV, used at runtime to decode, is Apache-2.0.",
+  "zone": {
+    "x": 120,
+    "y": 80,
+    "w": 80,
+    "h": 80
+  },
+  "geometry": {
+    "width": 320,
+    "height": 240,
+    "nominal_fps": 20
+  },
+  "clips": [
+    {
+      "id": "proof-10s",
+      "session_id": "session-eval",
+      "role": "eval",
+      "frames": 200,
+      "red_inclusive_ranges": [
+        [
+          44,
+          48
+        ],
+        [
+          120,
+          160
+        ]
+      ],
+      "sha256": "4a53d434632e7e5afb449ee5d64e62d488c5a91734be6049257744228a88f44e",
+      "bytes": 6482,
+      "media": "staged/proof-10s/clip.mp4",
+      "labels": "staged/proof-10s/labels.json",
+      "timestamps": "staged/proof-10s/timestamps.json"
+    },
+    {
+      "id": "absent-false",
+      "session_id": "session-eval",
+      "role": "eval",
+      "frames": 200,
+      "red_inclusive_ranges": [
+        [
+          64,
+          68
+        ]
+      ],
+      "sha256": "01fc8be0779b8d52d3ca5ef43283e7e1d59be79084b26bd63eaf4fa4bdccf21b",
+      "bytes": 6367,
+      "media": "staged/absent-false/clip.mp4",
+      "labels": "staged/absent-false/labels.json",
+      "timestamps": "staged/absent-false/timestamps.json"
+    },
+    {
+      "id": "edge-entry",
+      "session_id": "session-eval",
+      "role": "eval",
+      "frames": 200,
+      "red_inclusive_ranges": [
+        [
+          0,
+          6
+        ],
+        [
+          194,
+          199
+        ]
+      ],
+      "sha256": "55495237c01c66385630b0e3e68909ae0089a1eb7851d0f22e4a8abdeddf8d88",
+      "bytes": 6510,
+      "media": "staged/edge-entry/clip.mp4",
+      "labels": "staged/edge-entry/labels.json",
+      "timestamps": "staged/edge-entry/timestamps.json"
+    },
+    {
+      "id": "variable-timing",
+      "session_id": "session-eval",
+      "role": "eval",
+      "frames": 16,
+      "red_inclusive_ranges": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "sha256": "87b1e98f047c36729d3f3248e2068c6a8d25109ecbbacac8f1a67be1887dc3bb",
+      "bytes": 2066,
+      "media": "staged/variable-timing/clip.mp4",
+      "labels": "staged/variable-timing/labels.json",
+      "timestamps": "staged/variable-timing/timestamps.json"
+    },
+    {
+      "id": "noisy-absent",
+      "session_id": "session-eval",
+      "role": "eval",
+      "frames": 200,
+      "red_inclusive_ranges": [
+        [
+          64,
+          68
+        ]
+      ],
+      "sha256": "1dfdfdb87d1e0273052106b025410723cea7bfeff36c3444033cdf5d6205aac0",
+      "bytes": 359927,
+      "media": "staged/noisy-absent/clip.mp4",
+      "labels": "staged/noisy-absent/labels.json",
+      "timestamps": "staged/noisy-absent/timestamps.json"
+    },
+    {
+      "id": "tune-red",
+      "session_id": "session-tune",
+      "role": "tune",
+      "frames": 200,
+      "red_inclusive_ranges": [
+        [
+          20,
+          80
+        ]
+      ],
+      "sha256": "b2e0b51150e069c56a6db1927826865552641f30ca8cab43e76dad9622329bac",
+      "bytes": 6367,
+      "media": "staged/tune-red/clip.mp4",
+      "labels": "staged/tune-red/labels.json",
+      "timestamps": "staged/tune-red/timestamps.json"
+    }
+  ],
+  "invalid": [
+    {
+      "id": "overlap",
+      "media": "invalid/overlap/clip.mp4",
+      "labels": "invalid/overlap/labels.json",
+      "sha256": "ac5c54ab1eb4f7b22400736c6f3e7d8337c2e1ddf9338d04e1ad1d1ab0e0c207",
+      "fault": "overlapping zone_intrusion intervals"
+    },
+    {
+      "id": "bad-order",
+      "labels": "invalid/bad-order/labels.json",
+      "fault": "end_ms before start_ms"
+    },
+    {
+      "id": "bad-class",
+      "labels": "invalid/bad-class/labels.json",
+      "fault": "class is not zone_intrusion"
+    },
+    {
+      "id": "truncated",
+      "media": "invalid/truncated.mp4",
+      "sha256": "174400dbc228ec51ca01a6bb2473cdd2ced51df66f3b724d7871858cdd957882",
+      "fault": "not a readable video"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "name": "tune",
+  "clips": [
+    {
+      "id": "tune-red",
+      "media": "staged/tune-red/clip.mp4",
+      "labels": "staged/tune-red/labels.json",
+      "timestamps": "staged/tune-red/timestamps.json"
+    }
+  ]
+}

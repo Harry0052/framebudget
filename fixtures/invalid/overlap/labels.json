@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "clip_id": "overlap",
+  "session_id": "session-eval",
+  "class": "zone_intrusion",
+  "time_unit": "seconds",
+  "fps_nominal": 20,
+  "events": [
+    {
+      "id": "over-a",
+      "start_s": 0.1,
+      "end_s": 0.5,
+      "start_ms": 100,
+      "end_ms": 500,
+      "duration_band": "short"
+    },
+    {
+      "id": "over-b",
+      "start_s": 0.4,
+      "end_s": 0.8,
+      "start_ms": 400,
+      "end_ms": 800,
+      "duration_band": "short"
+    }
+  ]
+}
